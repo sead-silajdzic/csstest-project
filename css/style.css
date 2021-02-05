@@ -1,0 +1,187 @@
+/* RESET */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* GENERAL */
+
+/* 
+Font - Source Sans Pro:
+font-family: 'Source Sans Pro', sans-serif;
+*/
+
+html{
+    font-size: 62,5%;
+}
+
+body{
+    background-color: rgb(13, 13, 13);
+    color: white;
+    width: 100%;
+    height: 100%;
+    font-family: 'Source Sans Pro', sans-serif;
+
+    animation: loadPage .5s ease-out;
+}
+
+::selection{
+    background-color: rgb(139, 13, 139);
+}
+/* ----------------- */
+
+/* --------------------COUNTER CONTAINER------------------ */
+
+/* MAIN CONTAINER */
+.counter{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    padding: 3em 0;
+}
+/* --------------------- */
+
+/* HEAD */
+.head{
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.social{
+    display: flex;
+    justify-content: space-around;
+    width: 10em;
+}
+
+.social>div{
+    background-color: white;
+    border-radius: 5px;
+    width: 1.8em;
+    height: 1.8em;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all;
+}
+
+.social div:hover{
+    animation-name: poof;
+    animation-timing-function: ease-out;
+    animation-duration: .5s;
+}
+
+.social>div>img{
+    height: 70%;
+}
+/* ------------------ */
+
+/* COUNTDOWN */
+.countdown-box{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    
+    width: 55%;
+    margin: 0 auto;
+    text-align: center;
+    color: white;
+}
+
+.countdown-box>div{
+    border: 1px solid white;
+    width: 16em;
+    height: 16em;
+    position: relative;
+}
+
+.countdown-box>div>*{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.number{
+    font-size: 8em;
+    letter-spacing: .08em;
+}
+
+.word{
+    font-size: 1.2em;
+    text-transform: uppercase;
+    margin-top: 1em;
+}
+/* -------------------- */
+
+/* BOTTOM */
+.bottom{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 45%;
+    margin: 0 auto;
+}
+
+.bottom p {
+    line-height: 1.5em;
+    font-size: 1em;
+}
+
+.form{
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    gap: .2em;
+}
+
+.form input {
+    background-color: transparent;
+    border: 1px solid white;
+    line-height: 2em;
+    width: 30em;
+    padding: .3em 1em;
+    color: white;
+    font-size: 1em;
+    margin-top: 1.2em;
+}
+
+.form .btn {
+    border: none;
+    padding: 1em 2em;
+    font-size: .9em;
+    background-color: rgb(139, 13, 139);
+    color: white;
+    cursor: pointer;
+}
+/* -------------------- */
+
+/* KEYFRAMES */
+@keyframes poof {
+    0%{
+        transform: scale(1.5);
+    }
+
+    100%{
+        transform: scale(1);
+    }
+}
+
+@keyframes loadPage{
+    0%{
+        opacity: 0;
+    }
+
+    100%{
+        opacity: 1;
+    }
+}
